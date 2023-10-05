@@ -1,0 +1,10 @@
+16:57:40 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12916	     20	   3492	  16428	   402c	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+
+16:57:40 Build Finished. 0 errors, 0 warnings. (took 147ms)
+

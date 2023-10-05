@@ -397,10 +397,12 @@ int main(void)
  800050c:	2101      	movs	r1, #1
  800050e:	4808      	ldr	r0, [pc, #32]	; (8000530 <main+0x40>)
  8000510:	f001 fa33 	bl	800197a <HAL_GPIO_TogglePin>
+//	  HAL_Delay(200); // 200ms
 	  HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_7); // LED2
  8000514:	2180      	movs	r1, #128	; 0x80
  8000516:	4806      	ldr	r0, [pc, #24]	; (8000530 <main+0x40>)
  8000518:	f001 fa2f 	bl	800197a <HAL_GPIO_TogglePin>
+//	  HAL_Delay(200); // 200ms
 	  HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_14); // LED3
  800051c:	f44f 4180 	mov.w	r1, #16384	; 0x4000
  8000520:	4803      	ldr	r0, [pc, #12]	; (8000530 <main+0x40>)

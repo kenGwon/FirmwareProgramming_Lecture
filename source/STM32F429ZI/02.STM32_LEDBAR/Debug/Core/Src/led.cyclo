@@ -1,0 +1,10 @@
+led.c:14:6:led_main	1
+led.c:44:6:led_all_on	1
+led.c:51:6:led_all_off	1
+led.c:58:6:led_on_up	2
+led.c:68:6:led_on_down	2
+led.c:78:6:led_keepon_up	2
+led.c:88:6:led_keepon_down	2
+led.c:97:6:led_flower_on	2
+led.c:112:6:led_flower_off	2
+led.c:127:6:led_gradation	2

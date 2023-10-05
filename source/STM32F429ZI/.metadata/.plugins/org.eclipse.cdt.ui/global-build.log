@@ -1,4 +1,123 @@
-15:14:23 **** Build of configuration Debug for project 01.STM32_LED_DEMO ****
+19:25:11 **** Incremental Build of configuration Debug for project 01.STM32_LED_DEMO ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "01.STM32_LED_DEMO.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\01.STM32_LED_DEMO\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="01.STM32_LED_DEMO.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 01.STM32_LED_DEMO.elf
+ 
+arm-none-eabi-size   01.STM32_LED_DEMO.elf 
+arm-none-eabi-objdump -h -S  01.STM32_LED_DEMO.elf  > "01.STM32_LED_DEMO.list"
+   text	   data	    bss	    dec	    hex	filename
+  12584	     20	   3492	  16096	   3ee0	01.STM32_LED_DEMO.elf
+Finished building: default.size.stdout
+ 
+Finished building: 01.STM32_LED_DEMO.list
+ 
+19:26:15 **** Incremental Build of configuration Debug for project 01.STM32_LED_DEMO ****
+make -j16 all 
+arm-none-eabi-size   01.STM32_LED_DEMO.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12584	     20	   3492	  16096	   3ee0	01.STM32_LED_DEMO.elf
+Finished building: default.size.stdout
+ 
+19:26:43 **** Incremental Build of configuration Debug for project 01.STM32_LED_DEMO ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "01.STM32_LED_DEMO.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\01.STM32_LED_DEMO\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="01.STM32_LED_DEMO.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 01.STM32_LED_DEMO.elf
+ 
+arm-none-eabi-size   01.STM32_LED_DEMO.elf 
+arm-none-eabi-objdump -h -S  01.STM32_LED_DEMO.elf  > "01.STM32_LED_DEMO.list"
+   text	   data	    bss	    dec	    hex	filename
+  12604	     20	   3492	  16116	   3ef4	01.STM32_LED_DEMO.elf
+Finished building: default.size.stdout
+ 
+Finished building: 01.STM32_LED_DEMO.list
+ 
+19:26:56 **** Incremental Build of configuration Debug for project 01.STM32_LED_DEMO ****
+make -j16 all 
+arm-none-eabi-size   01.STM32_LED_DEMO.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12604	     20	   3492	  16116	   3ef4	01.STM32_LED_DEMO.elf
+Finished building: default.size.stdout
+ 
+20:15:44 **** Incremental Build of configuration Debug for project 01.STM32_LED_DEMO ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "01.STM32_LED_DEMO.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\01.STM32_LED_DEMO\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="01.STM32_LED_DEMO.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 01.STM32_LED_DEMO.elf
+ 
+arm-none-eabi-size   01.STM32_LED_DEMO.elf 
+arm-none-eabi-objdump -h -S  01.STM32_LED_DEMO.elf  > "01.STM32_LED_DEMO.list"
+   text	   data	    bss	    dec	    hex	filename
+  12592	     20	   3492	  16104	   3ee8	01.STM32_LED_DEMO.elf
+Finished building: default.size.stdout
+ 
+Finished building: 01.STM32_LED_DEMO.list
+ 
+20:15:47 **** Incremental Build of configuration Debug for project 01.STM32_LED_DEMO ****
+make -j16 all 
+arm-none-eabi-size   01.STM32_LED_DEMO.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12592	     20	   3492	  16104	   3ee8	01.STM32_LED_DEMO.elf
+Finished building: default.size.stdout
+ 
+20:36:51 **** Incremental Build of configuration Debug for project 01.STM32_LED_DEMO ****
+make -j16 all 
+arm-none-eabi-size   01.STM32_LED_DEMO.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12592	     20	   3492	  16104	   3ee8	01.STM32_LED_DEMO.elf
+Finished building: default.size.stdout
+ 
+20:36:54 **** Incremental Build of configuration Debug for project 01.STM32_LED_DEMO ****
+make -j16 all 
+arm-none-eabi-size   01.STM32_LED_DEMO.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12592	     20	   3492	  16104	   3ee8	01.STM32_LED_DEMO.elf
+Finished building: default.size.stdout
+ 
+20:47:39 **** Incremental Build of configuration Debug for project 01.STM32_LED_DEMO ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "01.STM32_LED_DEMO.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\01.STM32_LED_DEMO\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="01.STM32_LED_DEMO.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 01.STM32_LED_DEMO.elf
+ 
+arm-none-eabi-size   01.STM32_LED_DEMO.elf 
+arm-none-eabi-objdump -h -S  01.STM32_LED_DEMO.elf  > "01.STM32_LED_DEMO.list"
+   text	   data	    bss	    dec	    hex	filename
+  12604	     20	   3492	  16116	   3ef4	01.STM32_LED_DEMO.elf
+Finished building: default.size.stdout
+ 
+Finished building: 01.STM32_LED_DEMO.list
+ 
+20:47:42 **** Incremental Build of configuration Debug for project 01.STM32_LED_DEMO ****
+make -j16 all 
+arm-none-eabi-size   01.STM32_LED_DEMO.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12604	     20	   3492	  16116	   3ef4	01.STM32_LED_DEMO.elf
+Finished building: default.size.stdout
+ 
+09:23:17 **** Incremental Build of configuration Debug for project 01.STM32_LED_DEMO ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "01.STM32_LED_DEMO.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\01.STM32_LED_DEMO\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="01.STM32_LED_DEMO.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 01.STM32_LED_DEMO.elf
+ 
+arm-none-eabi-size   01.STM32_LED_DEMO.elf 
+arm-none-eabi-objdump -h -S  01.STM32_LED_DEMO.elf  > "01.STM32_LED_DEMO.list"
+   text	   data	    bss	    dec	    hex	filename
+  12592	     20	   3492	  16104	   3ee8	01.STM32_LED_DEMO.elf
+Finished building: default.size.stdout
+ 
+Finished building: 01.STM32_LED_DEMO.list
+ 
+09:23:21 **** Incremental Build of configuration Debug for project 01.STM32_LED_DEMO ****
+make -j16 all 
+arm-none-eabi-size   01.STM32_LED_DEMO.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12592	     20	   3492	  16104	   3ee8	01.STM32_LED_DEMO.elf
+Finished building: default.size.stdout
+ 
+15:24:22 **** Build of configuration Debug for project 02.STM32_LEDBAR ****
 make -j16 all 
 arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
 arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
@@ -21,27 +140,527 @@ arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -
 arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
 arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.o"
 arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32f429zitx.d" -MT"Core/Startup/startup_stm32f429zitx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Startup/startup_stm32f429zitx.o" "../Core/Startup/startup_stm32f429zitx.s"
+arm-none-eabi-gcc "../Core/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led.d" -MT"Core/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led.o"
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
 arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
 arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
 arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sysmem.o"
 arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
-arm-none-eabi-gcc -o "01.STM32_LED_DEMO.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\01.STM32_LED_DEMO\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="01.STM32_LED_DEMO.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 01.STM32_LED_DEMO.elf
+arm-none-eabi-gcc -o "02.STM32_LEDBAR.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\02.STM32_LEDBAR\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="02.STM32_LEDBAR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 02.STM32_LEDBAR.elf
  
-arm-none-eabi-size   01.STM32_LED_DEMO.elf 
-arm-none-eabi-objdump -h -S  01.STM32_LED_DEMO.elf  > "01.STM32_LED_DEMO.list"
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+arm-none-eabi-objdump -h -S  02.STM32_LEDBAR.elf  > "02.STM32_LEDBAR.list"
    text	   data	    bss	    dec	    hex	filename
-  12592	     20	   3492	  16104	   3ee8	01.STM32_LED_DEMO.elf
+  12716	     20	   3492	  16228	   3f64	02.STM32_LEDBAR.elf
 Finished building: default.size.stdout
  
-Finished building: 01.STM32_LED_DEMO.list
+Finished building: 02.STM32_LEDBAR.list
  
-15:15:04 **** Incremental Build of configuration Debug for project 01.STM32_LED_DEMO ****
+15:26:15 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
 make -j16 all 
-arm-none-eabi-size   01.STM32_LED_DEMO.elf 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
    text	   data	    bss	    dec	    hex	filename
-  12592	     20	   3492	  16104	   3ee8	01.STM32_LED_DEMO.elf
+  12716	     20	   3492	  16228	   3f64	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+15:29:01 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12716	     20	   3492	  16228	   3f64	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+15:29:25 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "02.STM32_LEDBAR.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\02.STM32_LEDBAR\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="02.STM32_LEDBAR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 02.STM32_LEDBAR.elf
+ 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+arm-none-eabi-objdump -h -S  02.STM32_LEDBAR.elf  > "02.STM32_LEDBAR.list"
+   text	   data	    bss	    dec	    hex	filename
+  12632	     20	   3492	  16144	   3f10	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+Finished building: 02.STM32_LEDBAR.list
+ 
+15:29:29 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12632	     20	   3492	  16144	   3f10	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+15:31:18 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "02.STM32_LEDBAR.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\02.STM32_LEDBAR\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="02.STM32_LEDBAR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 02.STM32_LEDBAR.elf
+ 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+arm-none-eabi-objdump -h -S  02.STM32_LEDBAR.elf  > "02.STM32_LEDBAR.list"
+   text	   data	    bss	    dec	    hex	filename
+  12716	     20	   3492	  16228	   3f64	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+Finished building: 02.STM32_LEDBAR.list
+ 
+15:31:21 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12716	     20	   3492	  16228	   3f64	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+15:36:53 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led.d" -MT"Core/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "02.STM32_LEDBAR.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\02.STM32_LEDBAR\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="02.STM32_LEDBAR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 02.STM32_LEDBAR.elf
+ 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+arm-none-eabi-objdump -h -S  02.STM32_LEDBAR.elf  > "02.STM32_LEDBAR.list"
+   text	   data	    bss	    dec	    hex	filename
+  12956	     20	   3492	  16468	   4054	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+Finished building: 02.STM32_LEDBAR.list
+ 
+15:36:57 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12956	     20	   3492	  16468	   4054	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+15:45:02 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led.d" -MT"Core/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led.o"
+../Core/Src/led.c: In function 'led_gradation':
+../Core/Src/led.c:33:9: error: expected expression before '{' token
+   33 |  temp = {0x0001, 0x0002, 0x0004, 0x0008, 0x0010, 0x0020, 0x0040, 0x0080};
+      |         ^
+make: *** [Core/Src/subdir.mk:37: Core/Src/led.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:45:49 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led.d" -MT"Core/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led.o"
+../Core/Src/led.c: In function 'led_gradation':
+../Core/Src/led.c:33:9: error: expected expression before '{' token
+   33 |  temp = {(uint16_t)0x0001, (uint16_t)0x0002, (uint16_t)0x0004, (uint16_t)0x0008, (uint16_t)0x0010, (uint16_t)0x0020, (uint16_t)0x0040, (uint16_t)0x0080};
+      |         ^
+make: *** [Core/Src/subdir.mk:37: Core/Src/led.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:47:00 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led.d" -MT"Core/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led.o"
+../Core/Src/led.c: In function 'led_gradation':
+../Core/Src/led.c:34:9: error: expected expression before '{' token
+   34 |  temp = {0x0001, 0x0002, 0x0004, 0x0008, 0x0010, 0x0020, 0x0040, 0x0080};
+      |         ^
+make: *** [Core/Src/subdir.mk:37: Core/Src/led.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:48:43 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led.d" -MT"Core/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led.o"
+arm-none-eabi-gcc -o "02.STM32_LEDBAR.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\02.STM32_LEDBAR\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="02.STM32_LEDBAR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o: in function `main':
+C:/ken/source/STM32F429ZI/02.STM32_LEDBAR/Debug/../Core/Src/main.c:107: undefined reference to `led_gradation'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: 02.STM32_LEDBAR.elf] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:48:57 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "02.STM32_LEDBAR.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\02.STM32_LEDBAR\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="02.STM32_LEDBAR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 02.STM32_LEDBAR.elf
+ 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+arm-none-eabi-objdump -h -S  02.STM32_LEDBAR.elf  > "02.STM32_LEDBAR.list"
+   text	   data	    bss	    dec	    hex	filename
+  12716	     20	   3492	  16228	   3f64	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+Finished building: 02.STM32_LEDBAR.list
+ 
+16:00:39 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led.d" -MT"Core/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led.o"
+../Core/Src/led.c: In function 'led_main':
+../Core/Src/led.c:13:29: error: 'GPIO_PIN_ALL' undeclared (first use in this function); did you mean 'GPIO_PIN_All'?
+   13 |   HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_ALL);
+      |                             ^~~~~~~~~~~~
+      |                             GPIO_PIN_All
+../Core/Src/led.c:13:29: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:37: Core/Src/led.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+16:03:24 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led.d" -MT"Core/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led.o"
+../Core/Src/led.c: In function 'led_main':
+../Core/Src/led.c:13:29: error: 'GPIO_PIN_ALL' undeclared (first use in this function); did you mean 'GPIO_PIN_All'?
+   13 |   HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_ALL);
+      |                             ^~~~~~~~~~~~
+      |                             GPIO_PIN_All
+../Core/Src/led.c:13:29: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:37: Core/Src/led.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+16:03:38 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led.d" -MT"Core/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led.o"
+arm-none-eabi-gcc -o "02.STM32_LEDBAR.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\02.STM32_LEDBAR\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="02.STM32_LEDBAR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 02.STM32_LEDBAR.elf
+ 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+arm-none-eabi-objdump -h -S  02.STM32_LEDBAR.elf  > "02.STM32_LEDBAR.list"
+   text	   data	    bss	    dec	    hex	filename
+  12652	     20	   3492	  16164	   3f24	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+Finished building: 02.STM32_LEDBAR.list
+ 
+16:03:43 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12652	     20	   3492	  16164	   3f24	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+16:04:11 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "02.STM32_LEDBAR.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\02.STM32_LEDBAR\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="02.STM32_LEDBAR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 02.STM32_LEDBAR.elf
+ 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+arm-none-eabi-objdump -h -S  02.STM32_LEDBAR.elf  > "02.STM32_LEDBAR.list"
+   text	   data	    bss	    dec	    hex	filename
+  12748	     20	   3492	  16260	   3f84	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+Finished building: 02.STM32_LEDBAR.list
+ 
+16:04:14 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12748	     20	   3492	  16260	   3f84	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+16:05:11 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led.d" -MT"Core/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led.o"
+arm-none-eabi-gcc -o "02.STM32_LEDBAR.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\02.STM32_LEDBAR\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="02.STM32_LEDBAR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 02.STM32_LEDBAR.elf
+ 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+arm-none-eabi-objdump -h -S  02.STM32_LEDBAR.elf  > "02.STM32_LEDBAR.list"
+   text	   data	    bss	    dec	    hex	filename
+  12748	     20	   3492	  16260	   3f84	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+Finished building: 02.STM32_LEDBAR.list
+ 
+16:05:13 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12748	     20	   3492	  16260	   3f84	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+16:05:55 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led.d" -MT"Core/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led.o"
+arm-none-eabi-gcc -o "02.STM32_LEDBAR.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\02.STM32_LEDBAR\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="02.STM32_LEDBAR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 02.STM32_LEDBAR.elf
+ 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+arm-none-eabi-objdump -h -S  02.STM32_LEDBAR.elf  > "02.STM32_LEDBAR.list"
+   text	   data	    bss	    dec	    hex	filename
+  12752	     20	   3492	  16264	   3f88	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+Finished building: 02.STM32_LEDBAR.list
+ 
+16:05:58 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12752	     20	   3492	  16264	   3f88	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+16:07:57 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led.d" -MT"Core/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "02.STM32_LEDBAR.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\02.STM32_LEDBAR\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="02.STM32_LEDBAR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 02.STM32_LEDBAR.elf
+ 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+arm-none-eabi-objdump -h -S  02.STM32_LEDBAR.elf  > "02.STM32_LEDBAR.list"
+   text	   data	    bss	    dec	    hex	filename
+  12644	     20	   3492	  16156	   3f1c	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+Finished building: 02.STM32_LEDBAR.list
+ 
+16:08:00 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12644	     20	   3492	  16156	   3f1c	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+16:09:46 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led.d" -MT"Core/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led.o"
+arm-none-eabi-gcc -o "02.STM32_LEDBAR.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\02.STM32_LEDBAR\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="02.STM32_LEDBAR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 02.STM32_LEDBAR.elf
+ 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+arm-none-eabi-objdump -h -S  02.STM32_LEDBAR.elf  > "02.STM32_LEDBAR.list"
+   text	   data	    bss	    dec	    hex	filename
+  12644	     20	   3492	  16156	   3f1c	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+Finished building: 02.STM32_LEDBAR.list
+ 
+16:09:49 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12644	     20	   3492	  16156	   3f1c	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+16:19:38 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led.d" -MT"Core/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led.o"
+arm-none-eabi-gcc -o "02.STM32_LEDBAR.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\02.STM32_LEDBAR\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="02.STM32_LEDBAR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 02.STM32_LEDBAR.elf
+ 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+arm-none-eabi-objdump -h -S  02.STM32_LEDBAR.elf  > "02.STM32_LEDBAR.list"
+   text	   data	    bss	    dec	    hex	filename
+  12836	     20	   3492	  16348	   3fdc	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+Finished building: 02.STM32_LEDBAR.list
+ 
+16:19:40 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12836	     20	   3492	  16348	   3fdc	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+16:22:39 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led.d" -MT"Core/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led.o"
+arm-none-eabi-gcc -o "02.STM32_LEDBAR.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\02.STM32_LEDBAR\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="02.STM32_LEDBAR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 02.STM32_LEDBAR.elf
+ 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+arm-none-eabi-objdump -h -S  02.STM32_LEDBAR.elf  > "02.STM32_LEDBAR.list"
+   text	   data	    bss	    dec	    hex	filename
+  12836	     20	   3492	  16348	   3fdc	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+Finished building: 02.STM32_LEDBAR.list
+ 
+16:22:42 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12836	     20	   3492	  16348	   3fdc	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+16:25:02 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led.d" -MT"Core/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led.o"
+arm-none-eabi-gcc -o "02.STM32_LEDBAR.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\02.STM32_LEDBAR\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="02.STM32_LEDBAR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 02.STM32_LEDBAR.elf
+ 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+arm-none-eabi-objdump -h -S  02.STM32_LEDBAR.elf  > "02.STM32_LEDBAR.list"
+   text	   data	    bss	    dec	    hex	filename
+  12836	     20	   3492	  16348	   3fdc	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+Finished building: 02.STM32_LEDBAR.list
+ 
+16:25:09 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led.d" -MT"Core/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led.o"
+arm-none-eabi-gcc -o "02.STM32_LEDBAR.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\02.STM32_LEDBAR\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="02.STM32_LEDBAR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 02.STM32_LEDBAR.elf
+ 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+arm-none-eabi-objdump -h -S  02.STM32_LEDBAR.elf  > "02.STM32_LEDBAR.list"
+   text	   data	    bss	    dec	    hex	filename
+  12836	     20	   3492	  16348	   3fdc	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+Finished building: 02.STM32_LEDBAR.list
+ 
+16:44:02 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led.d" -MT"Core/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led.o"
+../Core/Src/led.c: In function 'led_main':
+../Core/Src/led.c:17:3: warning: implicit declaration of function 'led_keep_on'; did you mean 'led_keepon_down'? [-Wimplicit-function-declaration]
+   17 |   led_keep_on();
+      |   ^~~~~~~~~~~
+      |   led_keepon_down
+../Core/Src/led.c:18:3: warning: implicit declaration of function 'led_keep_down'; did you mean 'led_keepon_down'? [-Wimplicit-function-declaration]
+   18 |   led_keep_down();
+      |   ^~~~~~~~~~~~~
+      |   led_keepon_down
+arm-none-eabi-gcc -o "02.STM32_LEDBAR.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\02.STM32_LEDBAR\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="02.STM32_LEDBAR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/led.o: in function `led_main':
+C:/ken/source/STM32F429ZI/02.STM32_LEDBAR/Debug/../Core/Src/led.c:17: undefined reference to `led_keep_on'
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\bin\ld.exe: C:/ken/source/STM32F429ZI/02.STM32_LEDBAR/Debug/../Core/Src/led.c:18: undefined reference to `led_keep_down'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: 02.STM32_LEDBAR.elf] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+16:44:17 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led.d" -MT"Core/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led.o"
+arm-none-eabi-gcc -o "02.STM32_LEDBAR.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\02.STM32_LEDBAR\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="02.STM32_LEDBAR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 02.STM32_LEDBAR.elf
+ 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+arm-none-eabi-objdump -h -S  02.STM32_LEDBAR.elf  > "02.STM32_LEDBAR.list"
+   text	   data	    bss	    dec	    hex	filename
+  12836	     20	   3492	  16348	   3fdc	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+Finished building: 02.STM32_LEDBAR.list
+ 
+16:44:38 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12836	     20	   3492	  16348	   3fdc	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+16:44:41 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12836	     20	   3492	  16348	   3fdc	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+16:46:14 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led.d" -MT"Core/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led.o"
+arm-none-eabi-gcc -o "02.STM32_LEDBAR.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\02.STM32_LEDBAR\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="02.STM32_LEDBAR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 02.STM32_LEDBAR.elf
+ 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+arm-none-eabi-objdump -h -S  02.STM32_LEDBAR.elf  > "02.STM32_LEDBAR.list"
+   text	   data	    bss	    dec	    hex	filename
+  12808	     20	   3492	  16320	   3fc0	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+Finished building: 02.STM32_LEDBAR.list
+ 
+16:46:18 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12808	     20	   3492	  16320	   3fc0	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+16:47:03 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led.d" -MT"Core/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led.o"
+arm-none-eabi-gcc -o "02.STM32_LEDBAR.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\02.STM32_LEDBAR\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="02.STM32_LEDBAR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 02.STM32_LEDBAR.elf
+ 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+arm-none-eabi-objdump -h -S  02.STM32_LEDBAR.elf  > "02.STM32_LEDBAR.list"
+   text	   data	    bss	    dec	    hex	filename
+  12816	     20	   3492	  16328	   3fc8	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+Finished building: 02.STM32_LEDBAR.list
+ 
+16:47:06 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12816	     20	   3492	  16328	   3fc8	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+16:56:49 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led.d" -MT"Core/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led.o"
+../Core/Src/led.c: In function 'led_flower_on':
+../Core/Src/led.c:105:38: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  105 |   HAL_GPIO_WritePin(GPIOD, 0x01 << 5 + i, 1);
+      |                                    ~~^~~
+../Core/Src/led.c:106:38: warning: suggest parentheses around '-' inside '<<' [-Wparentheses]
+  106 |   HAL_GPIO_WritePin(GPIOD, 0x01 << 4 - i, 1);
+      |                                    ~~^~~
+../Core/Src/led.c: In function 'led_flower_off':
+../Core/Src/led.c:120:38: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  120 |   HAL_GPIO_WritePin(GPIOD, 0x01 << 1 + i, 0);
+      |                                    ~~^~~
+../Core/Src/led.c:121:38: warning: suggest parentheses around '-' inside '<<' [-Wparentheses]
+  121 |   HAL_GPIO_WritePin(GPIOD, 0x01 << 8 - i, 0);
+      |                                    ~~^~~
+arm-none-eabi-gcc -o "02.STM32_LEDBAR.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\02.STM32_LEDBAR\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="02.STM32_LEDBAR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 02.STM32_LEDBAR.elf
+ 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+arm-none-eabi-objdump -h -S  02.STM32_LEDBAR.elf  > "02.STM32_LEDBAR.list"
+   text	   data	    bss	    dec	    hex	filename
+  12916	     20	   3492	  16428	   402c	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+Finished building: 02.STM32_LEDBAR.list
+ 
+16:57:10 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led.d" -MT"Core/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led.o"
+arm-none-eabi-gcc -o "02.STM32_LEDBAR.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\02.STM32_LEDBAR\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="02.STM32_LEDBAR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 02.STM32_LEDBAR.elf
+ 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+arm-none-eabi-objdump -h -S  02.STM32_LEDBAR.elf  > "02.STM32_LEDBAR.list"
+   text	   data	    bss	    dec	    hex	filename
+  12916	     20	   3492	  16428	   402c	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+Finished building: 02.STM32_LEDBAR.list
+ 
+16:57:13 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12916	     20	   3492	  16428	   402c	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+16:57:38 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led.d" -MT"Core/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led.o"
+arm-none-eabi-gcc -o "02.STM32_LEDBAR.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\02.STM32_LEDBAR\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="02.STM32_LEDBAR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 02.STM32_LEDBAR.elf
+ 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+arm-none-eabi-objdump -h -S  02.STM32_LEDBAR.elf  > "02.STM32_LEDBAR.list"
+   text	   data	    bss	    dec	    hex	filename
+  12916	     20	   3492	  16428	   402c	02.STM32_LEDBAR.elf
+Finished building: default.size.stdout
+ 
+Finished building: 02.STM32_LEDBAR.list
+ 
+16:57:40 **** Incremental Build of configuration Debug for project 02.STM32_LEDBAR ****
+make -j16 all 
+arm-none-eabi-size   02.STM32_LEDBAR.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12916	     20	   3492	  16428	   402c	02.STM32_LEDBAR.elf
 Finished building: default.size.stdout
  
