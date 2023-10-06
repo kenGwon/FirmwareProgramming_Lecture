@@ -3936,3 +3936,57 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\ken\source\STM32F42
 
 !ENTRY org.eclipse.cdt.core 1 0 2023-10-05 13:58:16.654
 !MESSAGE Indexed '02.STM32_LEDBAR' (26 sources, 113 headers) in 2.83 sec: 11,204 declarations; 48,526 references; 7 unresolved inclusions; 926 syntax errors; 1,604 unresolved names (2.6%)
+!SESSION 2023-10-06 07:30:50.645 -----------------------------------------------
+eclipse.buildId=Version 1.12.0
+java.version=11.0.17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-10-06 07:30:54.376
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-10-06 07:30:59.906
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-10-06 07:30:59.910
+!MESSAGE Log4j2 initialized with config file C:\ken\source\STM32F429ZI\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-10-06 07:31:14.975
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-10-06 10:19:42.813
+!MESSAGE Indexed '03.STM32_BUTTON' (28 sources, 119 headers) in 1.74 sec: 11,475 declarations; 51,379 references; 2 unresolved inclusions; 42 syntax errors; 147 unresolved names (0.23%)
+
+!ENTRY org.eclipse.cdt.ui 4 0 2023-10-06 13:01:42.413
+!MESSAGE Error in CDT UI during reconcile
+!STACK 1
+C Model Exception: C Model Status [Element led.c does not exist.]
+	at org.eclipse.cdt.internal.core.model.CElement.newNotPresentException(CElement.java:485)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.makeConsistent(TranslationUnit.java:583)
+	at org.eclipse.cdt.internal.core.model.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:65)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:346)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:613)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.runOperation(CModelOperation.java:641)
+	at org.eclipse.cdt.internal.core.model.WorkingCopy.reconcile(WorkingCopy.java:365)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:79)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:64)
+	at org.eclipse.cdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:89)
+	at org.eclipse.cdt.internal.ui.text.CCompositeReconcilingStrategy.reconcile(CCompositeReconcilingStrategy.java:90)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.cdt.internal.ui.text.CReconciler.process(CReconciler.java:346)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+!SUBENTRY 1 org.eclipse.cdt.core 4 969 2023-10-06 13:01:42.414
+!MESSAGE Element led.c does not exist.
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-10-06 13:37:27.694
+!MESSAGE Indexed '04.TIMER_UART' (28 sources, 119 headers) in 1.4 sec: 11,484 declarations; 51,423 references; 2 unresolved inclusions; 42 syntax errors; 147 unresolved names (0.23%)
+
+!ENTRY org.eclipse.help.base 2 0 2023-10-06 14:39:51.201
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.cdt.doc.user_5.4.1100.202112141617 [186]'. The index should be rebuilt with Lucene 8.4.1
+
+!ENTRY org.eclipse.help.base 2 0 2023-10-06 14:39:51.202
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.platform.doc.user_4.23.0.v20220302-1425 [345]'. The index should be rebuilt with Lucene 8.4.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-06 19:49:10.987
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.internal.ui.actions.DsfTerminateCommand$3$1@7e8c6ec6): Status OK: unknown code=0 OK' resulted in a rejected execution exception.

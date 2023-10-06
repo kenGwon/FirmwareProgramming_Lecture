@@ -1,0 +1,10 @@
+13:27:06 **** Incremental Build of configuration Debug for project 03.STM32_BUTTON ****
+make -j16 all 
+arm-none-eabi-size   03.STM32_BUTTON.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13564	     24	   3496	  17084	   42bc	03.STM32_BUTTON.elf
+Finished building: default.size.stdout
+ 
+
+13:27:06 Build Finished. 0 errors, 0 warnings. (took 151ms)
+
