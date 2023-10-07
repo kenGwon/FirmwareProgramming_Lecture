@@ -4,6 +4,8 @@
 #define LED_ON_UP 0
 #define LED_ON_DOWN 1
 
+#define debug
+
 void led_main(void);
 void led_all_on(void);
 void led_all_off(void);
@@ -119,6 +121,11 @@ void One_button_function_call(void)
 	{
 		func_index++;
 		func_index %= 8;
+
+#ifdef debug
+	printf("current func_index: %d\n", func_index);
+#endif
+
 	}
 
 	fp[func_index]();
