@@ -9,3 +9,4 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:02.STM32_LEDBAR\ Debug/activeLa
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:02.STM32_LEDBAR\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:03.STM32_BUTTON\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:04.TIMER_UART\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:04.TIMER_UART\ Debug/activeLaunchTarget=null\:---
