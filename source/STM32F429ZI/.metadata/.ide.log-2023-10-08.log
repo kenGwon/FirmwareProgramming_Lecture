@@ -1,0 +1,44 @@
+2023-10-10 10:39:06,914 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,494x259,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-10 10:39:26,956 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-10 10:40:46,476 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 542582904 Bytes (806354944)
+2023-10-10 10:40:47,338 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 573271280 Bytes (806354944)
+2023-10-10 10:40:49,218 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 626226416 Bytes (806354944)
+2023-10-10 10:40:49,638 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-10-10 10:40:49,638 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-10-10 10:40:49,638 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2023-10-10 10:40:49,638 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-10-10 10:40:49,638 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-10-10 10:40:49,639 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-10-10 10:40:49,639 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ETH
+2023-10-10 10:40:49,640 [INFO] CodeGenerator:793 - code generatio: config db path: C:\ST\STM32CubeIDE_1.12.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.8.0.202302231600\\db\
+2023-10-10 10:40:49,852 [INFO] CodeEngine:255 - oldGeneratedFile, C:\ken\source\STM32F429ZI\04.TIMER_UART\MXTmpFiles\license.tmp_save
+2023-10-10 10:40:50,204 [INFO] CodeEngine:279 - Generated code: C:\ken\source\STM32F429ZI\04.TIMER_UART\MXTmpFiles\license.tmp
+2023-10-10 10:40:50,310 [INFO] CodeEngine:255 - oldGeneratedFile, C:\ken\source\STM32F429ZI\04.TIMER_UART\MXTmpFiles\gpio.tmp_save
+2023-10-10 10:40:50,421 [INFO] CodeEngine:279 - Generated code: C:\ken\source\STM32F429ZI\04.TIMER_UART\MXTmpFiles\gpio.tmp
+2023-10-10 10:40:50,605 [WARN] IPConfigManager:2937 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2023-10-10 10:40:50,627 [INFO] CodeEngine:255 - oldGeneratedFile, C:\ken\source\STM32F429ZI\04.TIMER_UART\Core\Src\stm32f4xx_it.c_save
+2023-10-10 10:40:50,732 [INFO] CodeEngine:279 - Generated code: C:\ken\source\STM32F429ZI\04.TIMER_UART\Core\Src\stm32f4xx_it.c
+2023-10-10 10:40:50,745 [INFO] CodeEngine:255 - oldGeneratedFile, C:\ken\source\STM32F429ZI\04.TIMER_UART\Core\Inc\stm32f4xx_it.h_save
+2023-10-10 10:40:50,824 [INFO] CodeEngine:279 - Generated code: C:\ken\source\STM32F429ZI\04.TIMER_UART\Core\Inc\stm32f4xx_it.h
+2023-10-10 10:40:50,841 [INFO] CodeEngine:255 - oldGeneratedFile, C:\ken\source\STM32F429ZI\04.TIMER_UART\Core\Src\stm32f4xx_hal_msp.c_save
+2023-10-10 10:40:50,934 [INFO] CodeEngine:279 - Generated code: C:\ken\source\STM32F429ZI\04.TIMER_UART\Core\Src\stm32f4xx_hal_msp.c
+2023-10-10 10:40:50,944 [INFO] CodeEngine:255 - oldGeneratedFile, C:\ken\source\STM32F429ZI\04.TIMER_UART\MXTmpFiles\system.tmp_save
+2023-10-10 10:40:50,984 [INFO] CodeEngine:279 - Generated code: C:\ken\source\STM32F429ZI\04.TIMER_UART\MXTmpFiles\system.tmp
+2023-10-10 10:40:50,999 [INFO] CodeEngine:311 - oldGeneratedFile, C:\ken\source\STM32F429ZI\04.TIMER_UART\Core\Inc\stm32f4xx_hal_conf.h_save
+2023-10-10 10:40:51,071 [INFO] CodeEngine:335 - Generated code: C:\ken\source\STM32F429ZI\04.TIMER_UART\Core\Inc\stm32f4xx_hal_conf.h
+2023-10-10 10:40:51,097 [WARN] IPConfigManager:3431 - IP not found : USB_OTG
+2023-10-10 10:40:51,097 [WARN] CodeGenerator:3754 - IP not found : null
+2023-10-10 10:40:51,110 [INFO] CodeEngine:255 - oldGeneratedFile, C:\ken\source\STM32F429ZI\04.TIMER_UART\Core\Inc\main.h_save
+2023-10-10 10:40:51,175 [INFO] CodeEngine:279 - Generated code: C:\ken\source\STM32F429ZI\04.TIMER_UART\Core\Inc\main.h
+2023-10-10 10:40:51,189 [INFO] CodeEngine:255 - oldGeneratedFile, C:\ken\source\STM32F429ZI\04.TIMER_UART\Core\Src\main.c_save
+2023-10-10 10:40:51,305 [INFO] CodeEngine:279 - Generated code: C:\ken\source\STM32F429ZI\04.TIMER_UART\Core\Src\main.c
+2023-10-10 10:40:51,731 [INFO] ProjectBuilder:2996 - Time for Copy HAL[1] : 124mS.
+2023-10-10 10:40:51,740 [INFO] ProjectBuilder:4304 - Project Generator version: 3.19.2
+2023-10-10 10:40:51,948 [INFO] ConfigFileManager:1483 - The Die is : DIE419
+2023-10-10 10:40:51,957 [INFO] ApiDbMcu:507 - Load IP Config File for FATFS
+2023-10-10 10:40:51,966 [INFO] ApiDbMcu:507 - Load IP Config File for FREERTOS
+2023-10-10 10:40:51,972 [INFO] ApiDbMcu:507 - Load IP Config File for LIBJPEG
+2023-10-10 10:40:51,981 [INFO] ApiDbMcu:507 - Load IP Config File for LWIP
+2023-10-10 10:40:51,989 [INFO] ApiDbMcu:507 - Load IP Config File for MBEDTLS
+2023-10-10 10:40:52,014 [INFO] ApiDbMcu:507 - Load IP Config File for USB_DEVICE
+2023-10-10 10:40:52,021 [INFO] ApiDbMcu:507 - Load IP Config File for USB_HOST

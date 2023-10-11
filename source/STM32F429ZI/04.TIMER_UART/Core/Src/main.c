@@ -49,11 +49,13 @@ ETH_DMADescTypeDef  DMATxDscrTab[ETH_TX_DESC_CNT]; /* Ethernet Tx DMA Descriptor
 ETH_HandleTypeDef heth;
 
 UART_HandleTypeDef huart3;
+UART_HandleTypeDef huart6;
 
 PCD_HandleTypeDef hpcd_USB_OTG_FS;
 
 /* USER CODE BEGIN PV */
-
+uint8_t rx_data; // UART3 rx data
+uint8_t bt_rx_data; // UART6 bluetooth(bt) rx data
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -62,9 +64,12 @@ static void MX_GPIO_Init(void);
 static void MX_ETH_Init(void);
 static void MX_USART3_UART_Init(void);
 static void MX_USB_OTG_FS_PCD_Init(void);
+static void MX_USART6_UART_Init(void);
 /* USER CODE BEGIN PFP */
 extern void led_main(void);
 extern void button_main(void);
+extern void pc_command_processing(void);
+extern void bt_command_processing(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -135,8 +140,12 @@ int main(void)
   MX_ETH_Init();
   MX_USART3_UART_Init();
   MX_USB_OTG_FS_PCD_Init();
+  MX_USART6_UART_Init();
   /* USER CODE BEGIN 2 */
-  led_main();
+  printf("main() start!!\n");
+  //  led_main();
+  HAL_UART_Receive_IT(&huart3, &rx_data, 1); // RX huart3로 들어오는 interrupt 활성화
+  HAL_UART_Receive_IT(&huart6, &bt_rx_data, 1); // RX huart6로 들어오는 interrupt 활성화
 
   /* USER CODE END 2 */
 
@@ -144,6 +153,10 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+//	  printf("2936\n");
+//	  HAL_Delay(100);
+	  pc_command_processing();
+	  bt_command_processing();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -276,6 +289,39 @@ static void MX_USART3_UART_Init(void)
   /* USER CODE BEGIN USART3_Init 2 */
 
   /* USER CODE END USART3_Init 2 */
+
+}
+
+/**
+  * @brief USART6 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_USART6_UART_Init(void)
+{
+
+  /* USER CODE BEGIN USART6_Init 0 */
+
+  /* USER CODE END USART6_Init 0 */
+
+  /* USER CODE BEGIN USART6_Init 1 */
+
+  /* USER CODE END USART6_Init 1 */
+  huart6.Instance = USART6;
+  huart6.Init.BaudRate = 9600;
+  huart6.Init.WordLength = UART_WORDLENGTH_8B;
+  huart6.Init.StopBits = UART_STOPBITS_1;
+  huart6.Init.Parity = UART_PARITY_NONE;
+  huart6.Init.Mode = UART_MODE_TX_RX;
+  huart6.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart6.Init.OverSampling = UART_OVERSAMPLING_16;
+  if (HAL_UART_Init(&huart6) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN USART6_Init 2 */
+
+  /* USER CODE END USART6_Init 2 */
 
 }
 

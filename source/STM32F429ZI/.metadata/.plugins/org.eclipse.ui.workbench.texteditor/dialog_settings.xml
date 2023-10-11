@@ -6,8 +6,12 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value=""/>
+		<item key="selection" value="Base_"/>
 		<list key="findhistory">
+			<item value="base_"/>
+			<item value="periodelap"/>
+			<item value="period"/>
+			<item value="queue_rear"/>
 			<item value="9600"/>
 			<item value="fp"/>
 			<item value="define"/>

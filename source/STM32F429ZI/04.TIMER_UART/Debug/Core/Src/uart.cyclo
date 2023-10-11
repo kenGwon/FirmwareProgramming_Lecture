@@ -1,0 +1,3 @@
+uart.c:54:6:HAL_UART_RxCpltCallback	10
+uart.c:146:6:pc_command_processing	10
+uart.c:199:6:bt_command_processing	10

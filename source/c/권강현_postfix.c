@@ -4,6 +4,15 @@
  (1) 연산자를 스택에 넣고 빼는 과정에서 "연산자 우선순위" 아이디어를 적용해야 한다는 것.
  (2) 완성된 후위표기법 문자열을 앞에서부터 읽어나가는데 "n의 자릿수 문자열"을 연산자를 만나기 전까지 "숫자 그자체"로 읽어내기 위해서는
       <string.h>의 atoi() 내부 구현 코드를 살짝 가공하여 본인 코드에 맞게 적용해야 한다는 것.
+
+ < 한계 >
+
+ 본 코드는 연산 결과를 실수(float) 형태로 출력해줄 뿐,
+ >> ((222 + 4) * 55) - 100 / 7 * 5 - 5 * 10 = 12308.571429
+
+ 수식 입력 과정에서 실수(float) 형태의 수를 입력하는 것은 허용되지 않음.
+ >> ((222.5 + 4.3)* 55.0 ) - 100.2/ 7.3 *5.0 - 5.9 *10.0 = [occur fatal error!!!]
+
 */
 
 /*
@@ -21,7 +30,6 @@
 */
 
 #include <stdio.h>
-
 #include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
@@ -132,7 +140,7 @@ void convertInfixToPostfix(char *postfix, char *infix)
         *postfix++ = ' ';
     }
     postfix--;
-    *postfix = 0;
+    *postfix = '\0'; // postfix_expression 문자열 제작이 끝났으니 문자열 끝을 알리는 널문자 삽입
 }
 
 int checkPriority(int operator)
@@ -173,15 +181,15 @@ double calculateExpression(char *postfix)
             push(pop() + pop());
             postfix++;
         }
-        else if (*postfix == '*')
-        {
-            push(pop() * pop());
-            postfix++;
-        }
         else if (*postfix == '-')
         {
             atoi_num = pop();
             push(pop() - atoi_num);
+            postfix++;
+        }
+        else if (*postfix == '*')
+        {
+            push(pop() * pop());
             postfix++;
         }
         else if (*postfix == '/')

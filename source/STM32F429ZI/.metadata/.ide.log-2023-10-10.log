@@ -1,0 +1,51 @@
+2023-10-10 10:40:52,786 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2023-10-10 10:40:53,981 [INFO] ProjectBuilder:4505 - Time for Generating toolchain IDE Files: 2240mS.
+2023-10-10 10:40:53,983 [INFO] ProjectBuilder:2867 - Time for Copy CMSIS : 0mS.
+2023-10-10 10:40:53,985 [INFO] ProjectBuilder:2867 - Time for Copy CMSIS : 0mS.
+2023-10-10 11:12:16,402 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-10 15:01:11,919 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-10 15:02:05,344 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-10 15:02:53,587 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,450x231,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-10 15:02:59,212 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-10 15:04:35,819 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 838707472 Bytes (993001472)
+2023-10-10 15:04:37,769 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 870691048 Bytes (993001472)
+2023-10-10 15:04:39,831 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 616061264 Bytes (993001472)
+2023-10-10 15:04:39,971 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-10-10 15:04:39,971 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-10-10 15:04:39,971 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2023-10-10 15:04:39,971 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-10-10 15:04:39,971 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-10-10 15:04:39,971 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-10-10 15:04:39,971 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-10-10 15:04:39,971 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ETH
+2023-10-10 15:04:39,972 [INFO] CodeGenerator:793 - code generatio: config db path: C:\ST\STM32CubeIDE_1.12.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.8.0.202302231600\\db\
+2023-10-10 15:04:40,068 [INFO] CodeEngine:255 - oldGeneratedFile, C:\ken\source\STM32F429ZI\04.TIMER_UART\MXTmpFiles\license.tmp_save
+2023-10-10 15:04:40,137 [INFO] CodeEngine:279 - Generated code: C:\ken\source\STM32F429ZI\04.TIMER_UART\MXTmpFiles\license.tmp
+2023-10-10 15:04:40,161 [INFO] CodeEngine:255 - oldGeneratedFile, C:\ken\source\STM32F429ZI\04.TIMER_UART\MXTmpFiles\gpio.tmp_save
+2023-10-10 15:04:40,243 [INFO] CodeEngine:279 - Generated code: C:\ken\source\STM32F429ZI\04.TIMER_UART\MXTmpFiles\gpio.tmp
+2023-10-10 15:04:40,366 [WARN] IPConfigManager:2937 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2023-10-10 15:04:40,383 [INFO] CodeEngine:255 - oldGeneratedFile, C:\ken\source\STM32F429ZI\04.TIMER_UART\Core\Src\stm32f4xx_it.c_save
+2023-10-10 15:04:40,504 [INFO] CodeEngine:279 - Generated code: C:\ken\source\STM32F429ZI\04.TIMER_UART\Core\Src\stm32f4xx_it.c
+2023-10-10 15:04:40,515 [INFO] CodeEngine:255 - oldGeneratedFile, C:\ken\source\STM32F429ZI\04.TIMER_UART\Core\Inc\stm32f4xx_it.h_save
+2023-10-10 15:04:40,559 [INFO] CodeEngine:279 - Generated code: C:\ken\source\STM32F429ZI\04.TIMER_UART\Core\Inc\stm32f4xx_it.h
+2023-10-10 15:04:40,570 [INFO] CodeEngine:255 - oldGeneratedFile, C:\ken\source\STM32F429ZI\04.TIMER_UART\Core\Src\stm32f4xx_hal_msp.c_save
+2023-10-10 15:04:40,682 [INFO] CodeEngine:279 - Generated code: C:\ken\source\STM32F429ZI\04.TIMER_UART\Core\Src\stm32f4xx_hal_msp.c
+2023-10-10 15:04:40,689 [INFO] CodeEngine:255 - oldGeneratedFile, C:\ken\source\STM32F429ZI\04.TIMER_UART\MXTmpFiles\system.tmp_save
+2023-10-10 15:04:40,735 [INFO] CodeEngine:279 - Generated code: C:\ken\source\STM32F429ZI\04.TIMER_UART\MXTmpFiles\system.tmp
+2023-10-10 15:04:40,744 [INFO] CodeEngine:311 - oldGeneratedFile, C:\ken\source\STM32F429ZI\04.TIMER_UART\Core\Inc\stm32f4xx_hal_conf.h_save
+2023-10-10 15:04:40,811 [INFO] CodeEngine:335 - Generated code: C:\ken\source\STM32F429ZI\04.TIMER_UART\Core\Inc\stm32f4xx_hal_conf.h
+2023-10-10 15:04:40,826 [WARN] IPConfigManager:3431 - IP not found : USB_OTG
+2023-10-10 15:04:40,826 [WARN] CodeGenerator:3754 - IP not found : null
+2023-10-10 15:04:40,863 [INFO] CodeEngine:255 - oldGeneratedFile, C:\ken\source\STM32F429ZI\04.TIMER_UART\Core\Inc\main.h_save
+2023-10-10 15:04:40,919 [INFO] CodeEngine:279 - Generated code: C:\ken\source\STM32F429ZI\04.TIMER_UART\Core\Inc\main.h
+2023-10-10 15:04:40,927 [INFO] CodeEngine:255 - oldGeneratedFile, C:\ken\source\STM32F429ZI\04.TIMER_UART\Core\Src\main.c_save
+2023-10-10 15:04:41,009 [INFO] CodeEngine:279 - Generated code: C:\ken\source\STM32F429ZI\04.TIMER_UART\Core\Src\main.c
+2023-10-10 15:04:41,364 [INFO] ProjectBuilder:2996 - Time for Copy HAL[1] : 79mS.
+2023-10-10 15:04:41,366 [INFO] ProjectBuilder:4304 - Project Generator version: 3.19.2
+2023-10-10 15:04:41,492 [INFO] ConfigFileManager:1483 - The Die is : DIE419
+2023-10-10 15:04:42,315 [INFO] ProjectBuilder:4505 - Time for Generating toolchain IDE Files: 948mS.
+2023-10-10 15:04:42,315 [INFO] ProjectBuilder:2867 - Time for Copy CMSIS : 0mS.
+2023-10-10 15:04:42,317 [INFO] ProjectBuilder:2867 - Time for Copy CMSIS : 0mS.
+2023-10-10 15:58:08,666 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,450x251,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-10 15:58:15,512 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,450x251,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-10 20:57:59,353 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,450x227,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]

@@ -1,0 +1,10 @@
+16:33:05 **** Incremental Build of configuration Debug for project 05.TIMER_DHT11_ULTRASONIC ****
+make -j16 all 
+arm-none-eabi-size   05.TIMER_DHT11_ULTRASONIC.elf 
+   text	   data	    bss	    dec	    hex	filename
+  24160	    120	   4592	  28872	   70c8	05.TIMER_DHT11_ULTRASONIC.elf
+Finished building: default.size.stdout
+ 
+
+16:33:05 Build Finished. 0 errors, 0 warnings. (took 152ms)
+
