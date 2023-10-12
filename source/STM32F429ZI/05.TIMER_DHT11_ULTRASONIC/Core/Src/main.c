@@ -48,6 +48,9 @@ ETH_DMADescTypeDef  DMATxDscrTab[ETH_TX_DESC_CNT]; /* Ethernet Tx DMA Descriptor
 
 ETH_HandleTypeDef heth;
 
+I2C_HandleTypeDef hi2c1;
+
+TIM_HandleTypeDef htim3;
 TIM_HandleTypeDef htim10;
 TIM_HandleTypeDef htim11;
 
@@ -70,12 +73,18 @@ static void MX_USB_OTG_FS_PCD_Init(void);
 static void MX_USART6_UART_Init(void);
 static void MX_TIM10_Init(void);
 static void MX_TIM11_Init(void);
+static void MX_TIM3_Init(void);
+static void MX_I2C1_Init(void);
 /* USER CODE BEGIN PFP */
 extern void led_main(void);
 extern void button_main(void);
 extern void pc_command_processing(void);
 extern void bt_command_processing(void);
 extern void DHT11_main(void);
+extern void DHT11_Init(void);
+extern void DHT11_processing(void);
+extern void ultrasonic_processing(void);
+extern void i2c_lcd_main(void);
 
 void delay_us (unsigned long us);
 /* USER CODE END PFP */
@@ -95,11 +104,13 @@ void HAL_STSTICK_Handler(void)
 // move from Driver/STM32F4xx_HAL_Driver/stm32f4xx_hal_tim.c to here
 // enter here when every timer interrupt occurs
 volatile int TIM10_10ms_counter = 0;
+volatile int TIM10_10ms_ultrasonic = 0;
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
 	if (htim->Instance == TIM10)
 	{
-		TIM10_10ms_counter++;
+		TIM10_10ms_counter++; // timer for LED
+		TIM10_10ms_ultrasonic++; // timer for ultrasonic trigger
 	}
 }
 
@@ -172,42 +183,55 @@ int main(void)
   MX_USART6_UART_Init();
   MX_TIM10_Init();
   MX_TIM11_Init();
+  MX_TIM3_Init();
+  MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
   printf("main() start!!\n");
   //  led_main();
 
-  HAL_UART_Receive_IT(&huart3, &rx_data, 1); // RX huart3�??? ?��?��?��?�� interrupt ?��?��?��
-  HAL_UART_Receive_IT(&huart6, &bt_rx_data, 1); // RX huart6�??? ?��?��?��?�� interrupt ?��?��?��
+  DHT11_Init();
+
+  HAL_UART_Receive_IT(&huart3, &rx_data, 1); // RX huart3�?????? ?��?��?��?�� interrupt ?��?��?��
+  HAL_UART_Receive_IT(&huart6, &bt_rx_data, 1); // RX huart6�?????? ?��?��?��?�� interrupt ?��?��?��
 
   HAL_TIM_Base_Start_IT(&htim10); // add_kenGwon_1011
   HAL_TIM_Base_Start_IT(&htim11); // add_kenGwon_1011
+  HAL_TIM_IC_Start_IT(&htim3, TIM_CHANNEL_1); // for count pulse(InputCapture between rising edge & falling edge) add_kenGwon_1012
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-  DHT11_main();
+//  i2c_lcd_main();
+//  DHT11_main();
+
   TIM10_10ms_counter = 0;
 
   while (1)
   {
-	  if (TIM10_10ms_counter % 50 == 0)
-	  {
-		  HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
-	  }
-	  if (TIM10_10ms_counter % 100 == 0)
-	  {
-		  HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_7);
-	  }
-	  if (TIM10_10ms_counter % 150 == 0)
-	  {
-		  HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_14);
-	  }
+	  DHT11_processing();
+
+	  pc_command_processing();
+	  bt_command_processing();
+
+	  ultrasonic_processing();
+
+//	  if (TIM10_10ms_counter % 50 == 0)
+//	  {
+//		  HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
+//	  }
+//	  if (TIM10_10ms_counter % 100 == 0)
+//	  {
+//		  HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_7);
+//	  }
+//	  if (TIM10_10ms_counter % 150 == 0)
+//	  {
+//		  HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_14);
+//	  }
 
 //	  printf("2936\n");
 //	  HAL_Delay(100);
-//	  pc_command_processing();
-//	  bt_command_processing();
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -307,6 +331,102 @@ static void MX_ETH_Init(void)
   /* USER CODE BEGIN ETH_Init 2 */
 
   /* USER CODE END ETH_Init 2 */
+
+}
+
+/**
+  * @brief I2C1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_I2C1_Init(void)
+{
+
+  /* USER CODE BEGIN I2C1_Init 0 */
+
+  /* USER CODE END I2C1_Init 0 */
+
+  /* USER CODE BEGIN I2C1_Init 1 */
+
+  /* USER CODE END I2C1_Init 1 */
+  hi2c1.Instance = I2C1;
+  hi2c1.Init.ClockSpeed = 100000;
+  hi2c1.Init.DutyCycle = I2C_DUTYCYCLE_2;
+  hi2c1.Init.OwnAddress1 = 0;
+  hi2c1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
+  hi2c1.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
+  hi2c1.Init.OwnAddress2 = 0;
+  hi2c1.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
+  hi2c1.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+  if (HAL_I2C_Init(&hi2c1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Analogue filter
+  */
+  if (HAL_I2CEx_ConfigAnalogFilter(&hi2c1, I2C_ANALOGFILTER_ENABLE) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Digital filter
+  */
+  if (HAL_I2CEx_ConfigDigitalFilter(&hi2c1, 0) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN I2C1_Init 2 */
+
+  /* USER CODE END I2C1_Init 2 */
+
+}
+
+/**
+  * @brief TIM3 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM3_Init(void)
+{
+
+  /* USER CODE BEGIN TIM3_Init 0 */
+
+  /* USER CODE END TIM3_Init 0 */
+
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+  TIM_IC_InitTypeDef sConfigIC = {0};
+
+  /* USER CODE BEGIN TIM3_Init 1 */
+
+  /* USER CODE END TIM3_Init 1 */
+  htim3.Instance = TIM3;
+  htim3.Init.Prescaler = 84-1;
+  htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim3.Init.Period = 65535;
+  htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_IC_Init(&htim3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim3, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sConfigIC.ICPolarity = TIM_INPUTCHANNELPOLARITY_BOTHEDGE;
+  sConfigIC.ICSelection = TIM_ICSELECTION_DIRECTTI;
+  sConfigIC.ICPrescaler = TIM_ICPSC_DIV1;
+  sConfigIC.ICFilter = 0;
+  if (HAL_TIM_IC_ConfigChannel(&htim3, &sConfigIC, TIM_CHANNEL_1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM3_Init 2 */
+
+  /* USER CODE END TIM3_Init 2 */
 
 }
 
@@ -489,6 +609,7 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
+  __HAL_RCC_GPIOF_CLK_ENABLE();
   __HAL_RCC_GPIOE_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
   __HAL_RCC_GPIOG_CLK_ENABLE();
@@ -498,6 +619,9 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, LD1_Pin|LD3_Pin|LD2_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(ULTRASONIC_TRIGGER_GPIO_Port, ULTRASONIC_TRIGGER_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(USB_PowerSwitchOn_GPIO_Port, USB_PowerSwitchOn_Pin, GPIO_PIN_RESET);
@@ -525,6 +649,13 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : ULTRASONIC_TRIGGER_Pin */
+  GPIO_InitStruct.Pin = ULTRASONIC_TRIGGER_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(ULTRASONIC_TRIGGER_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : BUTTON3_Pin BUTTON2_Pin BUTTON1_Pin BUTTON0_Pin */
   GPIO_InitStruct.Pin = BUTTON3_Pin|BUTTON2_Pin|BUTTON1_Pin|BUTTON0_Pin;

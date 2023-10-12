@@ -1,10 +1,168 @@
-09:15:57 **** Incremental Build of configuration Debug for project 04.TIMER_UART ****
+10:04:58 **** Incremental Build of configuration Debug for project 04.TIMER_UART ****
 make -j16 all 
+arm-none-eabi-gcc "../Core/Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/uart.d" -MT"Core/Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/uart.o"
+../Core/Src/uart.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/uart.c:80:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   80 |     printf("Message Overflow !!!\n");
+      |     ^~~~~~
+../Core/Src/uart.c:80:5: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/uart.c:2:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    1 | #include "uart.h"
+  +++ |+#include <stdio.h>
+    2 | 
+../Core/Src/uart.c:137:4: warning: incompatible implicit declaration of built-in function 'printf'
+  137 |    printf("Message Overflow !!!\n");
+      |    ^~~~~~
+../Core/Src/uart.c:137:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/uart.c: In function 'pc_command_processing':
+../Core/Src/uart.c:153:3: warning: incompatible implicit declaration of built-in function 'printf'
+  153 |   printf("%s\n", rx_buff[queue_front - 1]);
+      |   ^~~~~~
+../Core/Src/uart.c:153:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/uart.c:155:23: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  155 |   if (!strncmp(rx_buff[queue_front - 1], "led_all_on", strlen("led_all_on"))) // ?äê?Çå?ëúÍ∞? ?ì§?ñ¥Í∞îÎã§!! strcmp?äî Í∞ôÏúºÎ©? 0?ùÑ Î¶¨ÌÑ¥?ïòÍ∏? ?ïåÎ¨∏Ïóê ifÎ¨∏Ïóê ÏßÑÏûÖ?ïò?†§Î®? !not?ùÑ ?Üµ?ï¥?Ñú 1(true)Î°? ?í§ÏßëÏñ¥ Ï§òÏïº ?ïú?ã§.
+      |                ~~~~~~~^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:160:23: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  160 |   if (!strncmp(rx_buff[queue_front - 1], "led_all_off", strlen("led_all_off")))
+      |                ~~~~~~~^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:165:23: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  165 |   if (!strncmp(rx_buff[queue_front - 1], "led_on_up", strlen("led_on_up")))
+      |                ~~~~~~~^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:170:23: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  170 |   if (!strncmp(rx_buff[queue_front - 1], "led_on_down", strlen("led_on_down")))
+      |                ~~~~~~~^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:175:23: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  175 |   if (!strncmp(rx_buff[queue_front - 1], "led_keepon_up", strlen("led_keepon_up")))
+      |                ~~~~~~~^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:180:23: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  180 |   if (!strncmp(rx_buff[queue_front - 1], "led_keepon_down", strlen("led_keepon_down")))
+      |                ~~~~~~~^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:185:23: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  185 |   if (!strncmp(rx_buff[queue_front - 1], "led_flower_on", strlen("led_flower_on")))
+      |                ~~~~~~~^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:190:23: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  190 |   if (!strncmp(rx_buff[queue_front - 1], "led_flower_off", strlen("led_flower_off")))
+      |                ~~~~~~~^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c: In function 'bt_command_processing':
+../Core/Src/uart.c:203:3: warning: incompatible implicit declaration of built-in function 'printf'
+  203 |   printf("%s\n", bt_rx_buff);
+      |   ^~~~~~
+../Core/Src/uart.c:203:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/uart.c:204:16: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  204 |   if (!strncmp(bt_rx_buff, "ledallon", strlen("ledallon"))) // ?äê?Çå?ëúÍ∞? ?ì§?ñ¥Í∞îÎã§!! strcmp?äî Í∞ôÏúºÎ©? 0?ùÑ Î¶¨ÌÑ¥?ïòÍ∏? ?ïåÎ¨∏Ïóê ifÎ¨∏Ïóê ÏßÑÏûÖ?ïò?†§Î®? !not?ùÑ ?Üµ?ï¥?Ñú 1(true)Î°? ?í§ÏßëÏñ¥ Ï§òÏïº ?ïú?ã§.
+      |                ^~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:209:16: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  209 |   if (!strncmp(bt_rx_buff, "ledalloff", strlen("ledalloff")))
+      |                ^~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:214:16: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  214 |   if (!strncmp(bt_rx_buff, "led_on_up", strlen("led_on_up")))
+      |                ^~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:219:16: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  219 |   if (!strncmp(bt_rx_buff, "led_on_down", strlen("led_on_down")))
+      |                ^~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:224:16: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  224 |   if (!strncmp(bt_rx_buff, "led_keepon_up", strlen("led_keepon_up")))
+      |                ^~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:229:16: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  229 |   if (!strncmp(bt_rx_buff, "led_keepon_down", strlen("led_keepon_down")))
+      |                ^~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:234:16: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  234 |   if (!strncmp(bt_rx_buff, "led_flower_on", strlen("led_flower_on")))
+      |                ^~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:239:16: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  239 |   if (!strncmp(bt_rx_buff, "led_flower_off", strlen("led_flower_off")))
+      |                ^~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "04.TIMER_UART.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\04.TIMER_UART\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="04.TIMER_UART.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 04.TIMER_UART.elf
+ 
 arm-none-eabi-size   04.TIMER_UART.elf 
+arm-none-eabi-objdump -h -S  04.TIMER_UART.elf  > "04.TIMER_UART.list"
    text	   data	    bss	    dec	    hex	filename
-  21228	    120	   4448	  25796	   64c4	04.TIMER_UART.elf
+  21216	    120	   4448	  25784	   64b8	04.TIMER_UART.elf
 Finished building: default.size.stdout
  
+Finished building: 04.TIMER_UART.list
+ 
 
-09:15:57 Build Finished. 0 errors, 0 warnings. (took 147ms)
+10:04:59 Build Finished. 0 errors, 21 warnings. (took 697ms)
 

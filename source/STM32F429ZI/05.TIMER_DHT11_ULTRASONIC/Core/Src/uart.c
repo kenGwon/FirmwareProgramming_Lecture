@@ -28,6 +28,10 @@ extern void led_keepon_down(void);
 extern void led_flower_on(void);
 extern void led_flower_off(void);
 
+extern int dht11time; // extern from DHT11.c
+extern volatile int DHT11_print_flag; // extern from DHT11.c
+extern volatile int ultrasonic_print_flag; // extern from ultrasonic.c
+
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart);
 void pc_command_processing(void);
 void bt_command_processing(void);
@@ -192,6 +196,36 @@ void pc_command_processing(void)
 			led_flower_off();
 			return;
 		}
+
+
+		if (!strncmp(rx_buff[queue_front - 1], "dht11time", strlen("dht11time")))
+		{
+			dht11time = atoi(rx_buff[queue_front - 1] + 9);
+			return;
+		}
+
+		if (!strncmp(rx_buff[queue_front - 1], "dht11_on", strlen("dht11_on")))
+		{
+			DHT11_print_flag = 1;
+			return;
+		}
+		if (!strncmp(rx_buff[queue_front - 1], "dht11_off", strlen("dht11_off")))
+		{
+			DHT11_print_flag = 0;
+			return;
+		}
+		if (!strncmp(rx_buff[queue_front - 1], "ultra_on", strlen("ultra_on")))
+		{
+			ultrasonic_print_flag = 1;
+			return;
+		}
+		if (!strncmp(rx_buff[queue_front - 1], "ultra_off", strlen("ultra_off")))
+		{
+			ultrasonic_print_flag = 0;
+			return;
+		}
+
+
 	}
 }
 

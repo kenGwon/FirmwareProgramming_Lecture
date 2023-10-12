@@ -69,6 +69,8 @@ void Error_Handler(void);
 #define RMII_REF_CLK_GPIO_Port GPIOA
 #define RMII_MDIO_Pin GPIO_PIN_2
 #define RMII_MDIO_GPIO_Port GPIOA
+#define ULTRASONIC_TIM3_CH1_Pin GPIO_PIN_6
+#define ULTRASONIC_TIM3_CH1_GPIO_Port GPIOA
 #define RMII_CRS_DV_Pin GPIO_PIN_7
 #define RMII_CRS_DV_GPIO_Port GPIOA
 #define RMII_RXD0_Pin GPIO_PIN_4
@@ -77,6 +79,8 @@ void Error_Handler(void);
 #define RMII_RXD1_GPIO_Port GPIOC
 #define LD1_Pin GPIO_PIN_0
 #define LD1_GPIO_Port GPIOB
+#define ULTRASONIC_TRIGGER_Pin GPIO_PIN_12
+#define ULTRASONIC_TRIGGER_GPIO_Port GPIOF
 #define BUTTON3_Pin GPIO_PIN_10
 #define BUTTON3_GPIO_Port GPIOE
 #define BUTTON2_Pin GPIO_PIN_12
