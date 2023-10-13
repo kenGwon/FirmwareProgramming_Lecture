@@ -6,8 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="Base_"/>
+		<item key="selection" value="GPIO_NOPULL"/>
 		<list key="findhistory">
+			<item value="GPIO_NOPULL"/>
+			<item value="ULTRASONIC_TRIGGER_GPIO_Port"/>
 			<item value="base_"/>
 			<item value="periodelap"/>
 			<item value="period"/>

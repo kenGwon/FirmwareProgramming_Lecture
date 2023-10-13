@@ -80,11 +80,16 @@ extern void led_main(void);
 extern void button_main(void);
 extern void pc_command_processing(void);
 extern void bt_command_processing(void);
+
 extern void DHT11_main(void);
 extern void DHT11_Init(void);
 extern void DHT11_processing(void);
 extern void ultrasonic_processing(void);
+
 extern void i2c_lcd_main(void);
+extern void i2c_lcd_init(void);
+extern void lcd_string(uint8_t *str);
+extern void move_cursor(uint8_t row, uint8_t column);
 
 void delay_us (unsigned long us);
 /* USER CODE END PFP */
@@ -187,12 +192,12 @@ int main(void)
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
   printf("main() start!!\n");
-  //  led_main();
 
   DHT11_Init();
+  i2c_lcd_init();
 
-  HAL_UART_Receive_IT(&huart3, &rx_data, 1); // RX huart3ï¿½?????? ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½ interrupt ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½
-  HAL_UART_Receive_IT(&huart6, &bt_rx_data, 1); // RX huart6ï¿½?????? ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½ interrupt ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½
+  HAL_UART_Receive_IT(&huart3, &rx_data, 1); // RX huart3ï¿??????? ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½ interrupt ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½
+  HAL_UART_Receive_IT(&huart6, &bt_rx_data, 1); // RX huart6ï¿??????? ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½ interrupt ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½
 
   HAL_TIM_Base_Start_IT(&htim10); // add_kenGwon_1011
   HAL_TIM_Base_Start_IT(&htim11); // add_kenGwon_1011
@@ -202,6 +207,7 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
+//  led_main();
 //  i2c_lcd_main();
 //  DHT11_main();
 

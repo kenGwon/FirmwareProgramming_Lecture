@@ -1,0 +1,7 @@
+../Core/Src/dcmotor.c:33:6:dcmotor_processing	8	static
+../Core/Src/dcmotor.c:59:6:dcmotor_pwm_auto_control	8	static
+../Core/Src/dcmotor.c:131:6:dcmotor_auto_mode_display	64	static
+../Core/Src/dcmotor.c:152:6:dcmotor_pwm_manual_control	8	static
+../Core/Src/dcmotor.c:257:10:Get_Current_ChannelControlRegister_Value	16	static
+../Core/Src/dcmotor.c:264:6:dcmotor_ledbar_control	24	static
+../Core/Src/dcmotor.c:278:6:FAN_ROTATE_DERECTION_LED_control	16	static

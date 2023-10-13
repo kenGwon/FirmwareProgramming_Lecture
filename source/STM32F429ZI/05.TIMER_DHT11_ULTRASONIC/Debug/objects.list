@@ -1,4 +1,5 @@
 "./Core/Src/DHT11.o"
+"./Core/Src/DHT11_self.o"
 "./Core/Src/button.o"
 "./Core/Src/i2c_lcd.o"
 "./Core/Src/led.o"
