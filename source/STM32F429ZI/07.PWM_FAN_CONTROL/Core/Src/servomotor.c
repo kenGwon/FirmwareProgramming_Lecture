@@ -13,10 +13,13 @@ void servo_motor_test_main(void)
 {
 	while (1)
 	{
-		// 0도 회전
-		__HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 50);
+		// 00도 위치로 이동
+		__HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 5);
 		HAL_Delay(1000);
-		// 180도 회전
+		// 90도 위치로 이동
+		__HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 60);
+		HAL_Delay(1000);
+		// 180도 위치로 이동
 		__HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 100);
 		HAL_Delay(1000);
 

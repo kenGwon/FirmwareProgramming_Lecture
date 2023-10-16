@@ -1,37 +1,26 @@
-21:13:55 **** Incremental Build of configuration Debug for project 07.PWM_FAN_CONTROL ****
+09:23:38 **** Incremental Build of configuration Debug for project 07.PWM_FAN_CONTROL ****
 make -j16 all 
-arm-none-eabi-gcc "../Core/Src/dcmotor.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/dcmotor.d" -MT"Core/Src/dcmotor.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/dcmotor.o"
-../Core/Src/dcmotor.c: In function 'dcmotor_auto_mode_display':
-../Core/Src/dcmotor.c:138:2: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-  138 |  sprintf(lcd_buff_1, "remain_time: %ds", auto_mode_remain_time_lv);
-      |  ^~~~~~~
-../Core/Src/dcmotor.c:138:2: warning: incompatible implicit declaration of built-in function 'sprintf'
-../Core/Src/dcmotor.c:5:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-    4 | #include "led.h"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:209:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  209 |   printf("main() start!!\n");
+      |   ^~~~~~
+../Core/Src/main.c:209:3: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:22:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   21 | #include "string.h"
   +++ |+#include <stdio.h>
-    5 | 
-../Core/Src/dcmotor.c:140:13: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
-  140 |  lcd_string(lcd_buff_1);
-      |             ^~~~~~~~~~
-      |             |
-      |             char *
-../Core/Src/dcmotor.c:7:33: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
-    7 | extern void lcd_string(uint8_t *str);
-      |                        ~~~~~~~~~^~~
-../Core/Src/dcmotor.c:134:23: warning: unused variable 'lcd_buff_2' [-Wunused-variable]
-  134 |  char lcd_buff_1[20], lcd_buff_2[20];
-      |                       ^~~~~~~~~~
+   22 | 
 arm-none-eabi-gcc -o "07.PWM_FAN_CONTROL.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\07.PWM_FAN_CONTROL\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="07.PWM_FAN_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: 07.PWM_FAN_CONTROL.elf
  
 arm-none-eabi-size   07.PWM_FAN_CONTROL.elf 
 arm-none-eabi-objdump -h -S  07.PWM_FAN_CONTROL.elf  > "07.PWM_FAN_CONTROL.list"
    text	   data	    bss	    dec	    hex	filename
-  37232	    140	   4924	  42296	   a538	07.PWM_FAN_CONTROL.elf
+  41128	    144	   4928	  46200	   b478	07.PWM_FAN_CONTROL.elf
 Finished building: default.size.stdout
  
 Finished building: 07.PWM_FAN_CONTROL.list
  
 
-21:13:56 Build Finished. 0 errors, 4 warnings. (took 634ms)
+09:23:39 Build Finished. 0 errors, 2 warnings. (took 630ms)
 

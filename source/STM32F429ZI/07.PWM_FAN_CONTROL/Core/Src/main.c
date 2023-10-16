@@ -119,6 +119,7 @@ volatile int TIM10_10ms_counter = 0;
 volatile int TIM10_10ms_ultrasonic = 0;
 volatile int TIM10_10ms_fan_rotate_direction_led = 0;
 volatile int TIM10_10ms_fan_auto_mode = 0;
+volatile int TIM10_10ms_fan_lcd_display_clear = 0;
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
 	if (htim->Instance == TIM10)
@@ -127,6 +128,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 		TIM10_10ms_ultrasonic++; // timer for ultrasonic trigger
 		TIM10_10ms_fan_rotate_direction_led++; // timer for fan_rotate_direction_led toggle
 		TIM10_10ms_fan_auto_mode++; // timer for Auto mode fan remain time check
+		TIM10_10ms_fan_lcd_display_clear++;
 	}
 }
 
@@ -209,8 +211,8 @@ int main(void)
   DHT11_Init();
   i2c_lcd_init();
 
-  HAL_UART_Receive_IT(&huart3, &rx_data, 1); // RX huart3�????????? ?��?��?��?�� interrupt ?��?��?��
-  HAL_UART_Receive_IT(&huart6, &bt_rx_data, 1); // RX huart6�????????? ?��?��?��?�� interrupt ?��?��?��
+  HAL_UART_Receive_IT(&huart3, &rx_data, 1); // activate interrupt from RX huart3
+  HAL_UART_Receive_IT(&huart6, &bt_rx_data, 1); // activate interrupt from RX huart6
 
   HAL_TIM_Base_Start_IT(&htim10); // add_kenGwon_1011
   HAL_TIM_Base_Start_IT(&htim11); // add_kenGwon_1011
@@ -235,10 +237,9 @@ int main(void)
 	  pc_command_processing();
 	  bt_command_processing();
 
-//	  DHT11_processing();
-//	  ultrasonic_processing();
+	  DHT11_processing();
+	  ultrasonic_processing();
 
-//	  dcmotor_pwm_control();
 	  dcmotor_processing();
 
     /* USER CODE END WHILE */
@@ -789,6 +790,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : BUTTON4_Pin */
+  GPIO_InitStruct.Pin = BUTTON4_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(BUTTON4_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : USB_PowerSwitchOn_Pin */
   GPIO_InitStruct.Pin = USB_PowerSwitchOn_Pin;

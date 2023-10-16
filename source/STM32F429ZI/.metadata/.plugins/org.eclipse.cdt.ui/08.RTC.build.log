@@ -1,0 +1,72 @@
+15:40:16 **** Incremental Build of configuration Debug for project 08.RTC ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/internal_rtc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/internal_rtc.d" -MT"Core/Src/internal_rtc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/internal_rtc.o"
+../Core/Src/internal_rtc.c: In function 'get_rtc':
+../Core/Src/internal_rtc.c:34:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   34 |   printf("%04d-%02d-%02d %02d-%02d-%02d\n",
+      |   ^~~~~~
+../Core/Src/internal_rtc.c:34:3: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/internal_rtc.c:6:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    5 | #include "button.h"
+  +++ |+#include <stdio.h>
+    6 | 
+../Core/Src/internal_rtc.c:41:4: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   41 |    sprintf(lcd_buff, "DATE:%04d-%02d-%02d",
+      |    ^~~~~~~
+../Core/Src/internal_rtc.c:41:4: warning: incompatible implicit declaration of built-in function 'sprintf'
+../Core/Src/internal_rtc.c:41:4: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/internal_rtc.c:44:15: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+   44 |    lcd_string(lcd_buff);
+      |               ^~~~~~~~
+      |               |
+      |               char *
+In file included from ../Core/Src/internal_rtc.c:2:
+../Core/Inc/i2c_lcd.h:23:26: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   23 | void lcd_string(uint8_t *str);
+      |                 ~~~~~~~~~^~~
+../Core/Src/internal_rtc.c:49:15: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+   49 |    lcd_string(lcd_buff);
+      |               ^~~~~~~~
+      |               |
+      |               char *
+In file included from ../Core/Src/internal_rtc.c:2:
+../Core/Inc/i2c_lcd.h:23:26: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   23 | void lcd_string(uint8_t *str);
+      |                 ~~~~~~~~~^~~
+../Core/Src/internal_rtc.c: In function 'set_time_button_UI':
+../Core/Src/internal_rtc.c:138:3: warning: incompatible implicit declaration of built-in function 'sprintf'
+  138 |   sprintf(lcd_buff1, "NOW=%02d:%02d:%02d", bcd2dec(curr_time.Hours), bcd2dec(curr_time.Minutes), bcd2dec(curr_time.Seconds));
+      |   ^~~~~~~
+../Core/Src/internal_rtc.c:138:3: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/internal_rtc.c:140:14: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+  140 |   lcd_string(lcd_buff1);
+      |              ^~~~~~~~~
+      |              |
+      |              char *
+In file included from ../Core/Src/internal_rtc.c:2:
+../Core/Inc/i2c_lcd.h:23:26: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   23 | void lcd_string(uint8_t *str);
+      |                 ~~~~~~~~~^~~
+../Core/Src/internal_rtc.c:144:14: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+  144 |   lcd_string(lcd_buff2);
+      |              ^~~~~~~~~
+      |              |
+      |              char *
+In file included from ../Core/Src/internal_rtc.c:2:
+../Core/Inc/i2c_lcd.h:23:26: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   23 | void lcd_string(uint8_t *str);
+      |                 ~~~~~~~~~^~~
+arm-none-eabi-gcc -o "08.RTC.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\08.RTC\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="08.RTC.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 08.RTC.elf
+ 
+arm-none-eabi-size   08.RTC.elf 
+arm-none-eabi-objdump -h -S  08.RTC.elf  > "08.RTC.list"
+   text	   data	    bss	    dec	    hex	filename
+  43756	    140	   4996	  48892	   befc	08.RTC.elf
+Finished building: default.size.stdout
+ 
+Finished building: 08.RTC.list
+ 
+
+15:40:16 Build Finished. 0 errors, 9 warnings. (took 569ms)
+

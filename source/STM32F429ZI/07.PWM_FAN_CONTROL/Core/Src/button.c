@@ -3,7 +3,7 @@
 // 버튼 4개의 초기 상태를 초기화 해주는 코드. 항상 S/W프로그래밍의 시작은 "초기화"이다.
 // 또한 이 배열은 각 버튼의 상태를 저장하는 역할도 수행한다.
 char button_status[BUTTON_NUMBER] = {
-		BUTTON_RELEASE, BUTTON_RELEASE, BUTTON_RELEASE, BUTTON_RELEASE
+		BUTTON_RELEASE, BUTTON_RELEASE, BUTTON_RELEASE, BUTTON_RELEASE, BUTTON_RELEASE // 내가 추가한 버튼 때문에 배열 요소 한개 더 추가함
 };
 
 /*
