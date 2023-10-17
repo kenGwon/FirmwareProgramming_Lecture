@@ -1,0 +1,26 @@
+15:48:00 **** Incremental Build of configuration Debug for project 10.FND ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:221:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  221 |   printf("main() start!!\n");
+      |   ^~~~~~
+../Core/Src/main.c:221:3: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:22:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   21 | #include "string.h"
+  +++ |+#include <stdio.h>
+   22 | 
+arm-none-eabi-gcc -o "10.FND.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\10.FND\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="10.FND.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 10.FND.elf
+ 
+arm-none-eabi-size   10.FND.elf 
+arm-none-eabi-objdump -h -S  10.FND.elf  > "10.FND.list"
+   text	   data	    bss	    dec	    hex	filename
+  44604	    188	   5092	  49884	   c2dc	10.FND.elf
+Finished building: default.size.stdout
+ 
+Finished building: 10.FND.list
+ 
+
+15:48:01 Build Finished. 0 errors, 2 warnings. (took 626ms)
+

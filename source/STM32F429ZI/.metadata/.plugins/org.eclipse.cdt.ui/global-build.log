@@ -23774,3 +23774,530 @@ arm-none-eabi-size   09.PWM_BUZZER.elf
   44644	    436	   5068	  50148	   c3e4	09.PWM_BUZZER.elf
 Finished building: default.size.stdout
  
+10:40:00 **** Incremental Build of configuration Debug for project 09.PWM_BUZZER ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:217:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  217 |   printf("main() start!!\n");
+      |   ^~~~~~
+../Core/Src/main.c:217:3: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:22:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   21 | #include "string.h"
+  +++ |+#include <stdio.h>
+   22 | 
+arm-none-eabi-gcc -o "09.PWM_BUZZER.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\09.PWM_BUZZER\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="09.PWM_BUZZER.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 09.PWM_BUZZER.elf
+ 
+arm-none-eabi-size   09.PWM_BUZZER.elf 
+arm-none-eabi-objdump -h -S  09.PWM_BUZZER.elf  > "09.PWM_BUZZER.list"
+   text	   data	    bss	    dec	    hex	filename
+  44108	    140	   5068	  49316	   c0a4	09.PWM_BUZZER.elf
+Finished building: default.size.stdout
+ 
+Finished building: 09.PWM_BUZZER.list
+ 
+13:18:50 **** Incremental Build of configuration Debug for project 09.PWM_BUZZER ****
+make -j16 all 
+arm-none-eabi-size   09.PWM_BUZZER.elf 
+   text	   data	    bss	    dec	    hex	filename
+  44108	    140	   5068	  49316	   c0a4	09.PWM_BUZZER.elf
+Finished building: default.size.stdout
+ 
+15:19:35 **** Build of configuration Debug for project 10.FND ****
+make -j16 all 
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_eth.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_eth.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_eth.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_eth.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.o"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32f429zitx.d" -MT"Core/Startup/startup_stm32f429zitx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Startup/startup_stm32f429zitx.o" "../Core/Startup/startup_stm32f429zitx.s"
+arm-none-eabi-gcc "../Core/Src/DHT11.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/DHT11.d" -MT"Core/Src/DHT11.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/DHT11.o"
+arm-none-eabi-gcc "../Core/Src/DHT11_self.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/DHT11_self.d" -MT"Core/Src/DHT11_self.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/DHT11_self.o"
+arm-none-eabi-gcc "../Core/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/button.d" -MT"Core/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/button.o"
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc "../Core/Src/dcmotor.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/dcmotor.d" -MT"Core/Src/dcmotor.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/dcmotor.o"
+arm-none-eabi-gcc "../Core/Src/fnd4dight.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/fnd4dight.d" -MT"Core/Src/fnd4dight.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/fnd4dight.o"
+arm-none-eabi-gcc "../Core/Src/i2c_lcd.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/i2c_lcd.d" -MT"Core/Src/i2c_lcd.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/i2c_lcd.o"
+arm-none-eabi-gcc "../Core/Src/internal_rtc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/internal_rtc.d" -MT"Core/Src/internal_rtc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/internal_rtc.o"
+../Core/Src/DHT11.c: In function 'DHT11_main':
+../Core/Src/DHT11.c:27:29: warning: variable 'd_Tmp' set but not used [-Wunused-but-set-variable]
+   27 |  uint8_t i_RH, d_RH, i_Tmp, d_Tmp;
+      |                             ^~~~~
+../Core/Src/DHT11.c:27:16: warning: variable 'd_RH' set but not used [-Wunused-but-set-variable]
+   27 |  uint8_t i_RH, d_RH, i_Tmp, d_Tmp;
+      |                ^~~~
+../Core/Src/DHT11.c: In function 'DHT11_processing':
+../Core/Src/DHT11.c:87:16: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+   87 |     lcd_string(lcd_buff);
+      |                ^~~~~~~~
+      |                |
+      |                char *
+../Core/Src/DHT11.c:16:33: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   16 | extern void lcd_string(uint8_t *str);
+      |                        ~~~~~~~~~^~~
+../Core/Src/DHT11.c:57:29: warning: variable 'd_Tmp' set but not used [-Wunused-but-set-variable]
+   57 |  uint8_t i_RH, d_RH, i_Tmp, d_Tmp;
+      |                             ^~~~~
+../Core/Src/DHT11.c:57:16: warning: variable 'd_RH' set but not used [-Wunused-but-set-variable]
+   57 |  uint8_t i_RH, d_RH, i_Tmp, d_Tmp;
+      |                ^~~~
+../Core/Src/fnd4dight.c: In function 'fnd4digit_main':
+../Core/Src/fnd4dight.c:48:5: warning: implicit declaration of function 'FND_update' [-Wimplicit-function-declaration]
+   48 |     FND_update(value);
+      |     ^~~~~~~~~~
+../Core/Src/fnd4dight.c: At top level:
+../Core/Src/fnd4dight.c:81:6: warning: conflicting types for 'FND_update'
+   81 | void FND_update(unsigned int value)
+      |      ^~~~~~~~~~
+../Core/Src/fnd4dight.c:48:5: note: previous implicit declaration of 'FND_update' was here
+   48 |     FND_update(value);
+      |     ^~~~~~~~~~
+arm-none-eabi-gcc "../Core/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led.d" -MT"Core/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led.o"
+../Core/Src/i2c_lcd.c: In function 'i2c_lcd_main':
+../Core/Src/i2c_lcd.c:44:14: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+   44 |   lcd_string("Hello World!!!"); // lcd_data() ?ï®?àòÍ∞? 0x20 ?ù¥?ÉÅ?ùò ASCIIÍ∞íÎßå LCD?óê Ï∂úÎ†•?ï† ?àò ?ûàÍ∏? ?ïåÎ¨∏Ïóê, Í∑∏Î≥¥?ã§ ?ûë?? \n(0x0A)?ùÑ ?ó¨Í∏∞Ïóê ?Ñ£?úºÎ©? Ï∂úÎ†•Í≤®Î°úÍ∞?Í∞? Íπ®Ï?Í≤? ?êú?ã§.
+      |              ^~~~~~~~~~~~~~~~
+      |              |
+      |              char *
+In file included from ../Core/Src/i2c_lcd.c:8:
+../Core/Inc/i2c_lcd.h:23:26: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   23 | void lcd_string(uint8_t *str);
+      |                 ~~~~~~~~~^~~
+../Core/Src/internal_rtc.c: In function 'get_rtc':
+../Core/Src/internal_rtc.c:34:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   34 |   printf("%04d-%02d-%02d %02d-%02d-%02d\n",
+      |   ^~~~~~
+../Core/Src/internal_rtc.c:34:3: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/internal_rtc.c:6:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    5 | #include "button.h"
+  +++ |+#include <stdio.h>
+    6 | 
+../Core/Src/internal_rtc.c:41:4: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   41 |    sprintf(lcd_buff, "DATE:%04d-%02d-%02d",
+      |    ^~~~~~~
+../Core/Src/internal_rtc.c:41:4: warning: incompatible implicit declaration of built-in function 'sprintf'
+../Core/Src/internal_rtc.c:41:4: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/internal_rtc.c:44:15: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+   44 |    lcd_string(lcd_buff);
+      |               ^~~~~~~~
+      |               |
+      |               char *
+In file included from ../Core/Src/internal_rtc.c:2:
+../Core/Inc/i2c_lcd.h:23:26: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   23 | void lcd_string(uint8_t *str);
+      |                 ~~~~~~~~~^~~
+../Core/Src/internal_rtc.c:49:15: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+   49 |    lcd_string(lcd_buff);
+      |               ^~~~~~~~
+      |               |
+      |               char *
+In file included from ../Core/Src/internal_rtc.c:2:
+../Core/Inc/i2c_lcd.h:23:26: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   23 | void lcd_string(uint8_t *str);
+      |                 ~~~~~~~~~^~~
+../Core/Src/internal_rtc.c: In function 'set_time_button_UI':
+../Core/Src/internal_rtc.c:138:3: warning: incompatible implicit declaration of built-in function 'sprintf'
+  138 |   sprintf(lcd_buff1, "NOW=%02d:%02d:%02d", bcd2dec(curr_time.Hours), bcd2dec(curr_time.Minutes), bcd2dec(curr_time.Seconds));
+      |   ^~~~~~~
+../Core/Src/internal_rtc.c:138:3: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/internal_rtc.c:140:14: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+  140 |   lcd_string(lcd_buff1);
+      |              ^~~~~~~~~
+      |              |
+      |              char *
+In file included from ../Core/Src/internal_rtc.c:2:
+../Core/Inc/i2c_lcd.h:23:26: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   23 | void lcd_string(uint8_t *str);
+      |                 ~~~~~~~~~^~~
+../Core/Src/internal_rtc.c:144:14: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+  144 |   lcd_string(lcd_buff2);
+      |              ^~~~~~~~~
+      |              |
+      |              char *
+In file included from ../Core/Src/internal_rtc.c:2:
+../Core/Inc/i2c_lcd.h:23:26: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   23 | void lcd_string(uint8_t *str);
+      |                 ~~~~~~~~~^~~
+../Core/Src/led.c: In function 'One_button_function_call':
+../Core/Src/led.c:126:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  126 |  printf("current func_index: %d\n", func_index);
+      |  ^~~~~~
+../Core/Src/led.c:126:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/led.c:3:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    2 | #include "button.h"
+  +++ |+#include <stdio.h>
+    3 | 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/servomotor.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/servomotor.d" -MT"Core/Src/servomotor.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/servomotor.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sysmem.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
+arm-none-eabi-gcc "../Core/Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/uart.d" -MT"Core/Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/uart.o"
+arm-none-eabi-gcc "../Core/Src/ultrasonic.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ultrasonic.d" -MT"Core/Src/ultrasonic.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ultrasonic.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:219:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  219 |   printf("main() start!!\n");
+      |   ^~~~~~
+../Core/Src/main.c:219:3: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:22:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   21 | #include "string.h"
+  +++ |+#include <stdio.h>
+   22 | 
+../Core/Src/stm32f4xx_it.c: In function 'SysTick_Handler':
+../Core/Src/stm32f4xx_it.c:197:3: warning: implicit declaration of function 'HAL_STSTICK_Handler'; did you mean 'HAL_SYSTICK_IRQHandler'? [-Wimplicit-function-declaration]
+  197 |   HAL_STSTICK_Handler(); // ADD_kenGwon_231006
+      |   ^~~~~~~~~~~~~~~~~~~
+      |   HAL_SYSTICK_IRQHandler
+../Core/Src/ultrasonic.c: In function 'ultrasonic_processing':
+../Core/Src/ultrasonic.c:57:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   57 |     printf("distance_lv: %dcm\n", distance_lv);
+      |     ^~~~~~
+../Core/Src/ultrasonic.c:57:5: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/ultrasonic.c:2:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    1 | #include "ultrasonic.h"
+  +++ |+#include <stdio.h>
+    2 | 
+../Core/Src/ultrasonic.c:58:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   58 |     sprintf(lcd_buff, "distance: %dcm", distance_lv);
+      |     ^~~~~~~
+../Core/Src/ultrasonic.c:58:5: warning: incompatible implicit declaration of built-in function 'sprintf'
+../Core/Src/ultrasonic.c:58:5: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/ultrasonic.c:63:17: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+   63 |      lcd_string(lcd_buff);
+      |                 ^~~~~~~~
+      |                 |
+      |                 char *
+../Core/Src/ultrasonic.c:7:33: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+    7 | extern void lcd_string(uint8_t *str);
+      |                        ~~~~~~~~~^~~
+../Core/Src/uart.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/uart.c:84:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   84 |     printf("Message Overflow !!!\n");
+      |     ^~~~~~
+../Core/Src/uart.c:84:5: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/uart.c:2:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    1 | #include "uart.h"
+  +++ |+#include <stdio.h>
+    2 | 
+../Core/Src/uart.c:141:4: warning: incompatible implicit declaration of built-in function 'printf'
+  141 |    printf("Message Overflow !!!\n");
+      |    ^~~~~~
+../Core/Src/uart.c:141:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/uart.c: In function 'pc_command_processing':
+../Core/Src/uart.c:157:3: warning: incompatible implicit declaration of built-in function 'printf'
+  157 |   printf("%s\n", rx_buff[queue_front - 1]);
+      |   ^~~~~~
+../Core/Src/uart.c:157:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/uart.c:159:23: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  159 |   if (!strncmp(rx_buff[queue_front - 1], "led_all_on", strlen("led_all_on"))) // ?äê?Çå?ëúÍ∞? ?ì§?ñ¥Í∞îÎã§!! strcmp?äî Í∞ôÏúºÎ©? 0?ùÑ Î¶¨ÌÑ¥?ïòÍ∏? ?ïåÎ¨∏Ïóê ifÎ¨∏Ïóê ÏßÑÏûÖ?ïò?†§Î®? !not?ùÑ ?Üµ?ï¥?Ñú 1(true)Î°? ?í§ÏßëÏñ¥ Ï§òÏïº ?ïú?ã§.
+      |                ~~~~~~~^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:164:23: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  164 |   if (!strncmp(rx_buff[queue_front - 1], "led_all_off", strlen("led_all_off")))
+      |                ~~~~~~~^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:169:23: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  169 |   if (!strncmp(rx_buff[queue_front - 1], "led_on_up", strlen("led_on_up")))
+      |                ~~~~~~~^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:174:23: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  174 |   if (!strncmp(rx_buff[queue_front - 1], "led_on_down", strlen("led_on_down")))
+      |                ~~~~~~~^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:179:23: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  179 |   if (!strncmp(rx_buff[queue_front - 1], "led_keepon_up", strlen("led_keepon_up")))
+      |                ~~~~~~~^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:184:23: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  184 |   if (!strncmp(rx_buff[queue_front - 1], "led_keepon_down", strlen("led_keepon_down")))
+      |                ~~~~~~~^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:189:23: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  189 |   if (!strncmp(rx_buff[queue_front - 1], "led_flower_on", strlen("led_flower_on")))
+      |                ~~~~~~~^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:194:23: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  194 |   if (!strncmp(rx_buff[queue_front - 1], "led_flower_off", strlen("led_flower_off")))
+      |                ~~~~~~~^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:201:23: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  201 |   if (!strncmp(rx_buff[queue_front - 1], "dht11time", strlen("dht11time")))
+      |                ~~~~~~~^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:203:46: warning: passing argument 1 of 'atoi' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  203 |    dht11time = atoi(rx_buff[queue_front - 1] + 9);
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+In file included from ../Core/Inc/uart.h:3,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\stdlib.h:81:23: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   81 | int atoi (const char *__nptr);
+      |           ~~~~~~~~~~~~^~~~~~
+../Core/Src/uart.c:207:23: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  207 |   if (!strncmp(rx_buff[queue_front - 1], "dht11_on", strlen("dht11_on")))
+      |                ~~~~~~~^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:212:23: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  212 |   if (!strncmp(rx_buff[queue_front - 1], "dht11_off", strlen("dht11_off")))
+      |                ~~~~~~~^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:217:23: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  217 |   if (!strncmp(rx_buff[queue_front - 1], "ultra_on", strlen("ultra_on")))
+      |                ~~~~~~~^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:222:23: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  222 |   if (!strncmp(rx_buff[queue_front - 1], "ultra_off", strlen("ultra_off")))
+      |                ~~~~~~~^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:229:23: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  229 |   if (!strncmp(rx_buff[queue_front - 1], "setrtc", strlen("setrtc")))
+      |                ~~~~~~~^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:231:4: warning: implicit declaration of function 'set_rtc' [-Wimplicit-function-declaration]
+  231 |    set_rtc(rx_buff[queue_front - 1]);
+      |    ^~~~~~~
+../Core/Src/uart.c: In function 'bt_command_processing':
+../Core/Src/uart.c:243:3: warning: incompatible implicit declaration of built-in function 'printf'
+  243 |   printf("%s\n", bt_rx_buff);
+      |   ^~~~~~
+../Core/Src/uart.c:243:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/uart.c:244:16: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  244 |   if (!strncmp(bt_rx_buff, "ledallon", strlen("ledallon"))) // ?äê?Çå?ëúÍ∞? ?ì§?ñ¥Í∞îÎã§!! strcmp?äî Í∞ôÏúºÎ©? 0?ùÑ Î¶¨ÌÑ¥?ïòÍ∏? ?ïåÎ¨∏Ïóê ifÎ¨∏Ïóê ÏßÑÏûÖ?ïò?†§Î®? !not?ùÑ ?Üµ?ï¥?Ñú 1(true)Î°? ?í§ÏßëÏñ¥ Ï§òÏïº ?ïú?ã§.
+      |                ^~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:249:16: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  249 |   if (!strncmp(bt_rx_buff, "ledalloff", strlen("ledalloff")))
+      |                ^~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:254:16: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  254 |   if (!strncmp(bt_rx_buff, "led_on_up", strlen("led_on_up")))
+      |                ^~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:259:16: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  259 |   if (!strncmp(bt_rx_buff, "led_on_down", strlen("led_on_down")))
+      |                ^~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:264:16: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  264 |   if (!strncmp(bt_rx_buff, "led_keepon_up", strlen("led_keepon_up")))
+      |                ^~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:269:16: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  269 |   if (!strncmp(bt_rx_buff, "led_keepon_down", strlen("led_keepon_down")))
+      |                ^~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:274:16: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  274 |   if (!strncmp(bt_rx_buff, "led_flower_on", strlen("led_flower_on")))
+      |                ^~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+../Core/Src/uart.c:279:16: warning: passing argument 1 of 'strncmp' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  279 |   if (!strncmp(bt_rx_buff, "led_flower_off", strlen("led_flower_off")))
+      |                ^~~~~~~~~~
+In file included from ../Core/Inc/uart.h:2,
+                 from ../Core/Src/uart.c:1:
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:43:15: note: expected 'const char *' but argument is of type 'volatile unsigned char *'
+   43 | int  strncmp (const char *, const char *, size_t);
+      |               ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "10.FND.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\10.FND\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="10.FND.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 10.FND.elf
+ 
+arm-none-eabi-size   10.FND.elf 
+arm-none-eabi-objdump -h -S  10.FND.elf  > "10.FND.list"
+   text	   data	    bss	    dec	    hex	filename
+  44588	    188	   5084	  49860	   c2c4	10.FND.elf
+Finished building: default.size.stdout
+ 
+Finished building: 10.FND.list
+ 
+15:19:43 **** Incremental Build of configuration Debug for project 10.FND ****
+make -j16 all 
+arm-none-eabi-size   10.FND.elf 
+   text	   data	    bss	    dec	    hex	filename
+  44588	    188	   5084	  49860	   c2c4	10.FND.elf
+Finished building: default.size.stdout
+ 
+15:42:06 **** Incremental Build of configuration Debug for project 10.FND ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/fnd4dight.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/fnd4dight.d" -MT"Core/Src/fnd4dight.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/fnd4dight.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/fnd4dight.c: In function 'fnd4digit_main':
+../Core/Src/fnd4dight.c:54:5: warning: implicit declaration of function 'FND_update' [-Wimplicit-function-declaration]
+   54 |     FND_update(value);
+      |     ^~~~~~~~~~
+../Core/Src/fnd4dight.c: At top level:
+../Core/Src/fnd4dight.c:87:6: warning: conflicting types for 'FND_update'
+   87 | void FND_update(unsigned int value)
+      |      ^~~~~~~~~~
+../Core/Src/fnd4dight.c:54:5: note: previous implicit declaration of 'FND_update' was here
+   54 |     FND_update(value);
+      |     ^~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:221:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  221 |   printf("main() start!!\n");
+      |   ^~~~~~
+../Core/Src/main.c:221:3: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:22:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   21 | #include "string.h"
+  +++ |+#include <stdio.h>
+   22 | 
+arm-none-eabi-gcc -o "10.FND.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\10.FND\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="10.FND.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 10.FND.elf
+ 
+arm-none-eabi-size   10.FND.elf 
+arm-none-eabi-objdump -h -S  10.FND.elf  > "10.FND.list"
+   text	   data	    bss	    dec	    hex	filename
+  44604	    188	   5092	  49884	   c2dc	10.FND.elf
+Finished building: default.size.stdout
+ 
+Finished building: 10.FND.list
+ 
+15:47:35 **** Incremental Build of configuration Debug for project 10.FND ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:221:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  221 |   printf("main() start!!\n");
+      |   ^~~~~~
+../Core/Src/main.c:221:3: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:22:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   21 | #include "string.h"
+  +++ |+#include <stdio.h>
+   22 | 
+arm-none-eabi-gcc -o "10.FND.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\10.FND\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="10.FND.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 10.FND.elf
+ 
+arm-none-eabi-size   10.FND.elf 
+arm-none-eabi-objdump -h -S  10.FND.elf  > "10.FND.list"
+   text	   data	    bss	    dec	    hex	filename
+  34416	    168	   5040	  39624	   9ac8	10.FND.elf
+Finished building: default.size.stdout
+ 
+Finished building: 10.FND.list
+ 
+15:48:00 **** Incremental Build of configuration Debug for project 10.FND ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:221:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  221 |   printf("main() start!!\n");
+      |   ^~~~~~
+../Core/Src/main.c:221:3: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:22:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   21 | #include "string.h"
+  +++ |+#include <stdio.h>
+   22 | 
+arm-none-eabi-gcc -o "10.FND.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ken\source\STM32F429ZI\10.FND\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="10.FND.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 10.FND.elf
+ 
+arm-none-eabi-size   10.FND.elf 
+arm-none-eabi-objdump -h -S  10.FND.elf  > "10.FND.list"
+   text	   data	    bss	    dec	    hex	filename
+  44604	    188	   5092	  49884	   c2dc	10.FND.elf
+Finished building: default.size.stdout
+ 
+Finished building: 10.FND.list
+ 
